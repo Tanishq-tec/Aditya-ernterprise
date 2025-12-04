@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aditya Enterprise - Manufacturer of premium quality ISI certified wires and cables. Browse T&T brand wires, aluminium cables, water pumps, and fan regulators.">
+  <meta name="keywords" content="wires, cables, T&T wires, ISI certified, aluminium cables, water pumps, fan regulators, Aditya Enterprise">
+  <title>Aditya Enterprise - Manufacturer of Wires & Cables</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	  <style>
+
+    :root {
+      --primary: #f97316;
+      --primary-dark: #ea580c;
+      --primary-light: #fed7aa;
+      --background: #ffffff;
+      --foreground: #1a1a1a;
+      --muted: #f5f5f5;
+      --muted-foreground: #737373;
+      --card: #ffffff;
+      --border: #e5e5e5;
+      --secondary: #fef3c7;
+      --secondary-foreground: #92400e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      height: 60px;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 768px) {
+      .header-content {
+        justify-content: space-between;
+        height: 70px;
+        flex-wrap: nowrap;
+      }
+    }
+
+    .logo {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .logo-text h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--foreground);
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--muted-foreground);
+    }
+
+    .nav-desktop {
+      display: flex;
+      gap: 0.25rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 768px) {
+      .nav-desktop {
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+      }
+    }
+
+    .nav-link {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    @media (min-width: 768px) {
+      .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    .nav-link {
+      padding: 0.5rem 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: medium;
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+      background: rgba(249, 115, 22, 0.1);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+    }
+
+    .btn-outline {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .contact-btn-desktop {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .contact-btn-desktop {
+        display: flex;
+      }
+    }
+
+    .mobile-menu-btn {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.open {
+      display: block !important;
+}
+    /* ----- Mobile menu styling: vertical dropdown ----- */
+@media (max-width: 768px) {
+  /* hide desktop nav on mobile so only hamburger menu is used */
+  .nav-desktop { display: none !important; }
+
+  /* mobile menu container: full width dropdown just below header */
+  .mobile-menu {
+    display: none;                    /* keep default hidden */
+    position: absolute;               /* drop down below header */
+    left: 0;
+    right: 0;
+    top: 70px;                        /* adjust if your header height is different */
+    width: 100%;
+    z-index: 60;                      /* above page content but below header (header was z-index:50) */
+    background: #ffffff;
+    margin: 0;
+    padding: 0.25rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+  }
+
+  /* when JS toggles .open it becomes visible */
+  .mobile-menu.open {
+    display: block !important;
+  }
+
+  /* make the inner links stacked and nicely spaced */
+  .mobile-menu a {
+    display: block;
+    text-decoration: none;
+    color: var(--foreground);
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+  }
+
+  /* last link shouldn't show a divider */
+  .mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+  /* improve readability on touch */
+  .mobile-menu a:active,
+  .mobile-menu a:focus,
+  .mobile-menu a:hover {
+    background: rgba(249,115,22,0.06);
+    color: var(--primary);
+  }
+
+  /* ensure hamburger button is visible */
+  .mobile-menu-btn { display: block !important; }
+
+  /* reserve top spacing if needed on very small screens */
+  body.menu-open {
+    /* optional: prevent page jump when menu opens
+       You can uncomment the line below if you want to prevent page scroll when menu open:
+       overflow: hidden;
+    */
+  }
+}
+
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--background), var(--muted));
+      padding: 3rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding: 5rem 0;
+      }
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+    }
+
+    .hero-bg-circle1 {
+      position: absolute;
+      top: 5rem;
+      left: 2rem;
+      width: 18rem;
+      height: 18rem;
+      background: var(--primary);
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+
+    .hero-bg-circle2 {
+      position: absolute;
+      bottom: 5rem;
+      right: 2rem;
+      width: 24rem;
+      height: 24rem;
+      background: var(--secondary);
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+
+    .hero-content {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .hero-text {
+      text-align: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-text {
+        text-align: left;
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(249, 115, 22, 0.1);
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .hero-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--muted-foreground);
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-tagline {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .hero-tagline span {
+      color: var(--primary);
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .hero-subtitle {
+        font-size: 1.25rem;
+      }
+      .hero-tagline {
+        font-size: 1.875rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+      .hero-subtitle {
+        font-size: 1.5rem;
+      }
+      .hero-tagline {
+        font-size: 2.25rem;
+      }
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      margin-bottom: 2rem;
+      max-width: 36rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-description {
+        margin-left: 0;
+      }
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: 640px) {
+      .hero-buttons {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-buttons {
+        justify-content: flex-start;
+      }
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .trust-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted-foreground);
+    }
+
+    .trust-badge svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--primary);
+    }
+
+    .hero-image-container {
+      position: relative;
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 10;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Products Section */
+    .products {
+      padding: 4rem 0;
+      background: var(--muted);
+    }
+
+    @media (min-width: 768px) {
+      .products {
+        padding: 6rem 0;
+      }
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .section-title {
+        font-size: 3rem;
+      }
+    }
+
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+
+    .products-grid {
+      display: grid;
+      gap: 1.5rem;
+      justify-items: center;
+    }
+
+	    @media (min-width: 640px) {
+	      .products-grid {
+	        grid-template-columns: repeat(2, 1fr);
+	        justify-items: stretch;
+	      }
+	    }
+	
+	    @media (min-width: 1024px) {
+	      .products-grid {
+	        grid-template-columns: repeat(3, 1fr);
+	        gap: 2rem;
+	      }
+	    }
+	    
+	    .product-card {
+	      max-width: 400px;
+	      width: 100%;
+	    }
+	
+	    @media (min-width: 640px) {
+	      .product-card {
+	        max-width: none;
+	      }
+	    }
+	
+	    .product-card {
+	      background: var(--card);
+	      border-radius: 1rem;
+	      overflow: hidden;
+	      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	      transition: all 0.3s;
+	    }
+	
+		    .product-card:hover {
+		      transform: translateY(-5px);
+		      box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
+		    }
+	    
+	    /* Custom Overrides for User Request */
+    
+    /* 1. Make T&T logo visible on all screen sizes (overrides line 76: .logo { display: none; }) */
+    .logo {
+      display: flex !important;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    /* 2. Make "Our Products" visible on mobile and hide other nav links from the main bar */
+    @media (max-width: 767px) {
+      /* Ensure nav-desktop is visible on mobile to show the "Our Products" link */
+      .nav-desktop {
+        display: flex !important;
+      }
+      
+      /* Hide all nav links on mobile */
+      .nav-desktop .nav-link {
+        display: none !important;
+      }
+      
+		      /* Show only the "Our Products" link on mobile */
+		      .nav-desktop a[href="#products"] {
+		        display: inline-flex !important; /* Use inline-flex to match the original button/link style */
+		      }
+		    }
+		
+		    .product-image-hover {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: imageCycle 4s infinite;
+    }
+
+    .product-image {
+      animation: imageCycleReverse 4s infinite;
+    }
+
+    @keyframes imageCycle {
+      0%, 45% { opacity: 0; }
+      50%, 95% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes imageCycleReverse {
+      0%, 45% { opacity: 1; }
+      50%, 95% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .isi-badge {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product-name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 0.5rem;
+    }
+
+    .product-description {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .product-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .spec-tag {
+      background: var(--muted);
+      color: var(--muted-foreground);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .products-cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .products-cta p {
+      color: var(--muted-foreground);
+      margin-bottom: 1rem;
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 0;
+      background: var(--background);
+    }
+
+    @media (min-width: 768px) {
+      .about {
+        padding: 6rem 0;
+      }
+    }
+
+    .about-content {
+      display: grid;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .about-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .about-text {
+      text-align: center;
+    }
+
+    @media (min-width: 1024px) {
+      .about-text {
+        text-align: left;
+      }
+    }
+
+    .about-text h2 {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-text h2 {
+        font-size: 2.25rem;
+      }
+    }
+
+    .about-text h2 span {
+      color: var(--primary);
+    }
+
+    .about-text p {
+      color: var(--muted-foreground);
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .about-features {
+        gap: 1.5rem;
+        justify-items: start;
+      }
+    }
+
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .about-feature-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: rgba(249, 115, 22, 0.1);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .about-feature-icon svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: var(--primary);
+    }
+
+    .about-feature-text h4 {
+      font-weight: 600;
+      color: var(--foreground);
+      font-size: 0.875rem;
+    }
+
+    .about-feature-text p {
+      font-size: 0.75rem;
+      color: var(--muted-foreground);
+      margin: 0;
+    }
+
+    .about-image {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 1rem;
+      padding: 3rem;
+      text-align: center;
+      color: white;
+    }
+
+    .about-image h3 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-image p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 4rem 0;
+      background: var(--muted);
+    }
+
+    @media (min-width: 768px) {
+      .contact {
+        padding: 6rem 0;
+      }
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      justify-items: center;
+    }
+
+    @media (min-width: 640px) {
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: stretch;
+      }
+    }
+
+    .contact-card {
+      max-width: 350px;
+      width: 100%;
+      background: var(--card);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    @media (min-width: 640px) {
+      .contact-card {
+        max-width: none;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-icon {
+      width: 3rem;
+      height: 3rem;
+      background: rgba(249, 115, 22, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .contact-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--primary);
+    }
+
+    .contact-card h3 {
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card p, .contact-card a {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      color: var(--primary);
+    }
+
+    .contact-cta {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 1rem;
+      padding: 3rem;
+      text-align: center;
+      color: white;
+    }
+
+    .contact-cta h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .contact-cta p {
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-cta .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: var(--primary);
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .contact-cta .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--foreground);
+      color: white;
+      padding: 3rem 0 1.5rem;
+    }
+
+    .footer-content {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer-content {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand h3 span {
+      color: var(--primary);
+    }
+
+    .footer-brand p {
+      color: #a3a3a3;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-section a {
+      color: #a3a3a3;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 1.5rem;
+      text-align: center;
+      color: #a3a3a3;
+      font-size: 0.875rem;
+    }
+
+    /* Animations */
+    .fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+      width: 24px;
+      height: 24px;
+      position: relative;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--foreground);
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+
+    /* Scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+  
+
+/* --- START OF RESPONSIVENESS FIXES (fixes.css) --- */
+/* Fixes for mainwebsite.html responsiveness issues */
+
+/* 1. Navigation Bar Fixes */
+
+/* Issue 1a: Make T&T logo visible on small screens */
+/* The original CSS hides .logo by default and shows it only on min-width: 768px.
+   We will override the default to show it, and then adjust the header layout. */
+.logo {
+  display: flex !important; /* Override the default display: none; */
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Adjust header content for small screens to make space for the logo and menu */
+@media (max-width: 767px) {
+  .header-content {
+    justify-content: space-between !important; /* Ensure logo and other elements are spaced out */
+    padding: 0 1rem; /* Add some padding for better look */
+  }
+  
+  /* Issue 1b: Ensure other navbar options are visible and accessible on small screens */
+  /* The original design seems to rely on a hidden mobile menu. 
+     Since we cannot modify the HTML to add a mobile menu toggle, 
+     we will ensure the desktop nav is hidden on mobile to avoid clutter, 
+     and assume the user has a separate mobile menu implementation (which is currently hidden by CSS).
+     If the user wants the links to be visible, they need a proper mobile menu.
+     For now, we'll ensure the logo is visible and the layout is clean.
+     The existing CSS for .nav-desktop on mobile (lines 112-116) is:
+     .nav-desktop { display: flex; gap: 0.25rem; justify-content: center; flex-wrap: wrap; }
+     This makes the nav links visible but likely cluttered.
+     If the user wants the *other options* to be visible, they are likely referring to the links.
+     Since the mobile menu is hidden, we will assume the links should be visible in a stacked/wrapped manner on mobile, 
+     but we need to ensure the logo doesn't push them out.
+     
+     The original CSS for .header-content on mobile is:
+     .header-content { display: flex; align-items: center; justify-content: center; gap: 0.5rem; height: 60px; flex-wrap: wrap; }
+     
+     Let's try to keep the logo and the mobile menu button visible, and hide the desktop nav links on mobile.
+     The user said "i want other options also on the navbar that exist". This is ambiguous.
+     Assuming "other options" means the navigation links, and they are currently being hidden or pushed off-screen.
+     The current mobile layout is likely broken because the logo is hidden.
+     By making the logo visible and setting justify-content: space-between, we fix the logo issue.
+     The navigation links (.nav-desktop) are currently wrapping and centered. If they are too many, they will wrap to a second line, which is not ideal for a fixed-height header.
+     
+     Let's assume the user wants the mobile menu button to be visible and functional, and the desktop nav to be hidden.
+     The original CSS for mobile-menu-btn is display: none. We need to show it.
+  */
+  
+  /* Show the mobile menu button if it exists in HTML */
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  
+  /* Show the desktop navigation links container on mobile to display selected links */
+  .nav-desktop {
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Hide all navigation links on mobile by default */
+  .nav-desktop .nav-link {
+    display: none !important;
+  }
+  
+  /* Show only the "Our Products" link (which is the second link) */
+  .nav-desktop .nav-link:nth-child(2) {
+    display: block !important;
+  }
+  
+  /* Hide the Contact Us button on mobile */
+  .contact-btn-desktop {
+    display: none !important;
+  }
+  
+  /* The user's request "i want other options also on the navbar that exist" is likely fulfilled by showing the mobile menu button, 
+     which is the standard way to access other options on a responsive site. */
+}
+
+/* 2. Product Card Image Sizing Fix */
+
+/* Issue 2: Fix "halfed cut" photos in product cards on responsive view. */
+/* The original CSS sets a fixed height: 300px for .product-image-container (line 520).
+   We will change this to use padding-bottom for an aspect ratio, which is better for responsive images. */
+.product-image-container {
+  height: auto !important; /* Remove fixed height */
+  padding-bottom: 75% !important; /* Set a 4:3 aspect ratio (300px / 400px width = 0.75) */
+  position: relative; /* Ensure children are positioned relative to this container */
+}
+
+/* Make sure the image fills the container without being cut off, while maintaining aspect ratio */
+.product-image, .product-image-hover {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Keep object-fit: cover to fill the space, but now the container has a responsive height */
+}
+
+/* --- END OF RESPONSIVENESS FIXES (fixes.css) --- */
+</style></head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">T&T</div>
+          <div class="logo-text">
+            <h1>T&T</h1>
+            <p>Wires & Cables</p>
+          </div>
+        </div>
+        
+        <nav class="nav-desktop">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#products" class="nav-link">Our Products</a>
+          <a href="#about" class="nav-link">About Us</a>
+          <a href="#contact" class="nav-link">Contact Us</a>
+        </nav>
+        
+        <a href="tel:+919876543210" class="btn-primary contact-btn-desktop">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Contact Us
+        </a>
+        
+        <button class="mobile-menu-btn" onclick="toggleMenu()">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="container">
+        <a href="#home" class="active" onclick="closeMenu()">Home</a>
+        <a href="#products" onclick="closeMenu()">Our Products</a>
+        <a href="#about" onclick="closeMenu()">About Us</a>
+        <a href="#contact" onclick="closeMenu()">Contact Us</a>
+        <a href="tel:+919876543210" class="btn-primary" style="text-align: center; margin-top: 0.5rem;">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-circle1"></div>
+      <div class="hero-bg-circle2"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            ISI Certified Products
+          </div>
+          
+          <h1 class="hero-title fade-in">
+            <span>Aditya Enterprise</span>
+          </h1>
+          <p class="hero-subtitle fade-in">Manufacturer of Wires & Cables</p>
+          
+          <h2 class="hero-tagline fade-in" style="animation-delay: 0.1s;">
+            Quality <span>Wires & Cables</span> for Safe Homes
+          </h2>
+          
+          <p class="hero-description fade-in" style="animation-delay: 0.2s;">
+            Your trusted manufacturer of premium quality electrical wires and cables. 
+            All products ISI certified for your safety and peace of mind.
+          </p>
+          
+          <div class="hero-buttons fade-in" style="animation-delay: 0.3s;">
+            <a href="#products" class="btn-primary">
+              Browse Products
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn-outline">Get Quote</a>
+          </div>
+          
+          <div class="trust-badges fade-in" style="animation-delay: 0.4s;">
+            <div class="trust-badge">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="7"/>
+                <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/>
+              </svg>
+              T&T Brand
+            </div>
+            <div class="trust-badge">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              ISI Certified
+            </div>
+            <div class="trust-badge">
+              <div style="width: 24px; height: 24px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold;">✓</div>
+              Premium Quality
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image-container fade-in" style="animation-delay: 0.2s;">
+          <div class="hero-image">
+            <img src="Gemini_Generated_Image_b4i4lgb4i4lgb4i4.png" alt="T&T Insulated Wires and Cables - Premium Quality">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">
+          Browse our complete range of ISI certified wires, cables, pumps and electrical accessories 
+          for residential, commercial, and industrial applications.
+        </p>
+      </div>
+      
+      <div class="products-grid">
+        <!-- T&T Products -->
+        <div class="product-card fade-in">
+          <div class="product-image-container">
+            <img src="T&T1.png" alt="T&T House Wire" class="product-image">
+            <img src="T&Tnew.png" alt="T&T House Wire Hover" class="product-image-hover">
+            <span class="isi-badge">ISI</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">T&T House Wire (Red)</h3>
+            <p class="product-description">Premium quality PVC insulated house wire for residential and commercial applications. Suitable for 1100V applications.</p>
+            <div class="product-specs">
+              <span class="spec-tag">90 meters</span>
+              <span class="spec-tag">1100V</span>
+              <span class="spec-tag">1.5mm</span>
+              <span class="spec-tag">Copper</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card fade-in" style="animation-delay: 0.1s;">
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1597424216809-3ba9864aeb18?w=400&h=300&fit=crop" alt="T&T Copper Twisted Wire" class="product-image">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="T&T Copper Twisted Wire Hover" class="product-image-hover">
+            <span class="isi-badge">ISI</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">T&T Copper Twisted Wire</h3>
+            <p class="product-description">High-grade twisted copper wire ideal for electrical connections and flexible installations.</p>
+            <div class="product-specs">
+              <span class="spec-tag">80 meters</span>
+              <span class="spec-tag">32/20 Size</span>
+              <span class="spec-tag">Copper Core</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card fade-in" style="animation-delay: 0.2s;">
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1597424216809-3ba9864aeb18?w=400&h=300&fit=crop" alt="T&T 4 Core Flexible Cable" class="product-image">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="T&T 4 Core Flexible Cable Hover" class="product-image-hover">
+            <span class="isi-badge">ISI</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">T&T 4 Core Flexible Cable</h3>
+            <p class="product-description">Multi-core flexible round cable perfect for heavy duty applications and industrial use.</p>
+            <div class="product-specs">
+              <span class="spec-tag">2.5mm</span>
+              <span class="spec-tag">4 Core</span>
+              <span class="spec-tag">Flexible</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Aluminium Cables -->
+        <div class="product-card fade-in" style="animation-delay: 0.3s;">
+          <div class="product-image-container">
+            <img src="c1.jpg" alt="Aluminium Armoured Cable" class="product-image">
+            <img src="c2.jpg" alt="Aluminium Armoured Cable Hover" class="product-image-hover">
+            <span class="isi-badge">ISI</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aluminium Armoured Cable</h3>
+            <p class="product-description">Heavy duty aluminium armoured cables for underground and industrial applications with excellent durability.</p>
+            <div class="product-specs">
+              <span class="spec-tag">Multi-Core</span>
+              <span class="spec-tag">Armoured</span>
+              <span class="spec-tag">Industrial Grade</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card fade-in" style="animation-delay: 0.4s;">
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Aluminium Power Cable" class="product-image">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop" alt="Aluminium Power Cable Hover" class="product-image-hover">
+            <span class="isi-badge">ISI</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aluminium Power Cable</h3>
+            <p class="product-description">High capacity aluminium power cables suitable for power distribution and heavy electrical loads.</p>
+            <div class="product-specs">
+              <span class="spec-tag">Various Sizes</span>
+              <span class="spec-tag">High Capacity</span>
+              <span class="spec-tag">Durable</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Water Pumps -->
+        <div class="product-card fade-in" style="animation-delay: 0.5s;">
+          <div class="product-image-container">
+            <img src="Waterpumps3.jpg" alt="Water Pump - Self Priming" class="product-image">
+            <img src="Waterpumps2.jpg" alt="Water Pump - Self Priming Hover" class="product-image-hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Water Pump - Self Priming</h3>
+            <p class="product-description">Efficient self-priming water pump for domestic and agricultural use with reliable performance.</p>
+            <div class="product-specs">
+              <span class="spec-tag">1 HP</span>
+              <span class="spec-tag">Self Priming</span>
+              <span class="spec-tag">Energy Efficient</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card fade-in" style="animation-delay: 0.6s;">
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Water Pump - Centrifugal" class="product-image">
+            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop" alt="Water Pump - Centrifugal Hover" class="product-image-hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Water Pump - Centrifugal</h3>
+            <p class="product-description">High-performance centrifugal water pump for continuous water supply applications.</p>
+            <div class="product-specs">
+              <span class="spec-tag">0.5 HP</span>
+              <span class="spec-tag">Centrifugal</span>
+              <span class="spec-tag">Heavy Duty</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Fan Regulators -->
+        <div class="product-card fade-in" style="animation-delay: 0.7s;">
+          <div class="product-image-container">
+            <img src="fan regulator2.webp" alt="Fan Regulator - Standard" class="product-image">
+            <img src="fan regulator.webp" alt="Fan Regulator - Standard Hover" class="product-image-hover">
+            <span class="isi-badge">ISI</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Fan Regulator - Standard</h3>
+            <p class="product-description">Quality fan regulator with smooth speed control and durable construction for long-lasting performance.</p>
+            <div class="product-specs">
+              <span class="spec-tag">5 Step</span>
+              <span class="spec-tag">Modular</span>
+              <span class="spec-tag">ISI Marked</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-card fade-in" style="animation-delay: 0.8s;">
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop" alt="Fan Regulator - Rotary" class="product-image">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Fan Regulator - Rotary Hover" class="product-image-hover">
+            <span class="isi-badge">ISI</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Fan Regulator - Rotary</h3>
+            <p class="product-description">Rotary fan regulator with step-less speed control for precise fan speed adjustment.</p>
+            <div class="product-specs">
+              <span class="spec-tag">4 Step</span>
+              <span class="spec-tag">Rotary</span>
+              <span class="spec-tag">Compact</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="products-cta">
+        <p>Need custom specifications? Contact us for bulk orders and special requirements.</p>
+        <a href="https://wa.me/918770980601" target="_blank" class="btn-primary">
+          Request Price List
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About <span>Aditya Enterprise</span></h2>
+          <p>
+            We are a leading manufacturer and supplier of high-quality electrical wires, cables, 
+            and accessories. With years of experience in the industry, we have built a reputation 
+            for delivering products that meet the highest standards of safety and performance.
+          </p>
+          <p>
+            All our products are ISI certified, ensuring they meet stringent quality standards. 
+            Our T&T brand has become synonymous with reliability and excellence in the electrical 
+            industry.
+          </p>
+          
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>ISI Certified</h4>
+                <p>All products certified</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="8" r="7"/>
+                  <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/>
+                </svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>Premium Quality</h4>
+                <p>Best materials used</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>Build Trust</h4>
+                <p>Customer Satisfaction</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="1" y="3" width="15" height="13"/>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/>
+                  <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>Fast Delivery</h4>
+                <p>Quick dispatch</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-image">
+          <h3>55+</h3>
+          <p>Years of Excellence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">
+          Get in touch with us for inquiries, orders, or any assistance you need.
+        </p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </div>
+          <h3>WhatsApp</h3>
+          <a href="https://wa.me/918770980601" target="_blank">+91 8770980601</a>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h3>Phone</h3>
+          <a href="tel:+918770980601">+91 8770980601</a>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <h3>Email</h3>
+          <a href="mailto:sandeeplodha028@gmail.com">sandeeplodha028@gmail.com</a>
+        </div>
+        
+      </div>
+      
+      <div class="contact-cta">
+        <h3>Ready to Order?</h3>
+        <p>Contact us today for bulk orders and competitive pricing on all our products.</p>
+        <a href="https://wa.me/919876543210" target="_blank" class="btn-white">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          WhatsApp Us Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3><span>Aditya</span> Enterprise</h3>
+          <p>Manufacturer of premium quality ISI certified wires, cables, and electrical accessories.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#products">T&T Wires</a></li>
+            <li><a href="#products">Aluminium Cables</a></li>
+            <li><a href="#products">Water Pumps</a></li>
+            <li><a href="#products">Fan Regulators</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Aditya Enterprise. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+    }
+    
+    function closeMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.remove('open');
+    }
+    
+    // Active nav link on scroll
+  window.addEventListener('scroll', function () {
+  const sections = ['home', 'products', 'about', 'contact'];
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-menu a');
+  const scrollPosition = window.scrollY + 200;
+
+  sections.forEach(sectionId => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offsetTop = section.offsetTop;
+      const offsetHeight = section.offsetHeight;
+
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + sectionId) {
+            link.classList.add('active');
+          }
+        });
+      }
+    }
+  });
+});
+
+          
+    // Fade in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
